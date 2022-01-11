@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><title>Welcome to Nur Najihah Solihah Webpage</title></head>
+<body><body background="images/city.jpg">
+<audio controls autoplay>
+	<source src="sound/intro.mp3" type="audio/mpeg">
+</audio>	
+
+<font face="bubbly" size="3">
+<a href="index.html" accesskey="1"><img src="images/bhome.png"></a> <a href="summary.html" accesskey="2"><img src="images/bsum.png"></a>  <a href="objective.html" accesskey="3"><img src="images/bobjective.png"></a><a href="education.html"  accesskey="4"> <img src="images/bedu.png"></a><a href="skills.html"> <img src="images/bskills.png"></a>  <a href="curricular.html"><img src="images/bcurricular.png"></a> <a href="experiences.html"><img src="images/bexp.png"></a> <a href="achievements.html"> <img src="images/bach.png"></a>  <a href="references.html"><img src="images/bref.png"></a> </font>
+<font face="CollegiateBlackFLF" color="black"><marquee behavior="alternate"><h1><a name="top"> My work experiences </h1></marquee></font>
+
+<p align="center"><img src="images/jijiey.jpg" width="160" height="160">
+<font face="cooper black" size="4" color="white">
+<p> Atarek Kamil Ibrahim &amp; Co Aug 2013 — Jan 2014
+Internship as Audit trainee
+<p> 1. Have prepared and completed several full set of financial statement during internship.
+<p> 2. Have been audited several dormant company, private company, corporate company, government (east Malaysia) and non-governmental organisation.
+<p> 3. Knowledgeable in basic Company Secretary.
+<p> Syarikat Takaful Malaysia Berhad October 2014 — Present
+Skim Latihan 1 Malaysia
+<p> 1. Attended courses. (Team building, English classes, Managing Expectations, Time & Task, Grooming course,
+Syariah's Islamic banking product, Developing and maintaining positive attitude at workplace)<? xml:namespace
+prefix = o ns = "urn:schemas-microsoft-com:office:office" />
+<p> 2. Assign at Internal Audit Division as internal audit trainee</p></font>
+
+</p></font>
+</body>
+</html>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
